@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='url(%23grad)'/%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%' stop-color='%2300ffd5'/%3E%3Cstop offset='100%' stop-color='%23ff9900'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='28' font-family='Segoe UI' fill='url(%23textGrad)'%3EAM%3C/text%3E%3ClinearGradient id='textGrad' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%' stop-color='white'/%3E%3Cstop offset='100%' stop-color='black'/%3E%3C/linearGradient%3E%3C/svg%3E">
+<meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Mutisya | Full Stack Developer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(5px);
+      color: #f0f0f0;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      color: #00ffd5;
+    }
+    header p {
+      font-size: 1.3rem;
+      color: #b0ffec;
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 1rem auto;
+      display: block;
+      border: 4px solid #00ffd5;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      margin-top: 2rem;
+    }
+    h2 {
+      color: #00ffd5;
+      margin-bottom: 1rem;
+    }
+    .services li {
+      margin: 0.5rem 0;
+    }
+    .social a {
+      margin-right: 1rem;
+      color: #00ffd5;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .social a:hover {
+      color: #ffcc00;
+    }
+    a {
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #ffcc00;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #f4f4f4;
+      color: #000;
+    }
+    form button {
+      background: linear-gradient(135deg, #00ffd5 0%, #00aaff 100%);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.4s ease;
+    }
+    form button:hover {
+      background: linear-gradient(135deg, #00aaff 0%, #00ffd5 100%);
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      padding: 12px 16px;
+      border-radius: 50px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: background 0.3s ease;
+      z-index: 1000; /* Ensure it doesn't cover important content */
+    }
+    .whatsapp:hover {
+      background: #1ebe5d;
+    }
+  @media (max-width: 768px) {
+      .whatsapp {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+    }
+    
+    window.addEventListener('scroll', () => {
+      const whatsapp = document.querySelector('.whatsapp');
+      if (window.scrollY > 100) {
+      whatsapp.style.transform = 'scale(0.8)';
+      whatsapp.style.opacity = '1';
+      } else {
+        whatsapp.style.transform = 'scale(1)';
+        whatsapp.style.opacity = '1';
+      }
+    });
+  </style>
+</head>
+<body>
+  <header>
+    {% load static %}
+    <img src="{% static 'assets/alex.jpg' %}" alt="Alex Mutisya" class="profile-img">
+    <h1>Alex Mutisya</h1>
+    <p>Full Stack Developer | Web & App Developer</p>
+    <p><em>"Empowering Ideas Through Code"</em></p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I am a passionate full stack developer based in Nairobi, Kenya. I specialize in building Android applications and modern, responsive websites. My stack includes Kotlin, Django, Python, and HTML. I help businesses and individuals digitize their ideas with clean, efficient, and user-friendly solutions.</p>
+  </section>
+
+  <section>
+    <h2>Services</h2>
+    <ul class="services">
+      <li>✅ Android App Development</li>
+      <li>✅ Custom Website Design</li>
+      <li>✅ Django/Python Automation</li>
+      <li>✅ Affordable Business Solutions</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Portfolio</h2>
+    <p>Visit my GitHub profile to explore some of my work:</p>
+    <p><a href="https://github.com/xanderwise" target="_blank">github.com/xanderwise</a></p>
+  </section>
+
+  <section>
+    <h2>Contact Me</h2>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    {% if success %}
+      <p style="color: #00ffd5; font-weight: bold;">Your message has been sent successfully!</p>
+    {% elif error %}
+      <p style="color: red;">There was an error sending your message. Please try again.</p>
+    {% endif %}
+  </section>
+
+  <section>
+    <h2>Connect with Me</h2>
+    <div class="social">
+      <a href="https://github.com/xanderwise" target="_blank">GitHub</a>
+      <a href="https://twitter.com/xanderwize" target="_blank">X (Twitter)</a>
+      <a href="https://www.linkedin.com/in/alex-mutisya-176701360" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <a class="whatsapp" href="https://wa.me/254758980618" target="_blank" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 448 512" fill="white">
+      <path d="M380.9 97.1C339 55.2 283.2 32 224.4 32c-113.1 0-205 91.9-205 205 0 36.1 9.4 71.3 27.1 102.3L9.6 480l143.7-37.8c29.4 15.8 62.5 24.1 96.2 24.1h.1c113.1 0 205-91.9 205-205 0-58.8-23.2-114.6-65.1-156.5zM224.4 438c-28.3 0-56.1-7.6-80.3-21.9l-5.8-3.4-85.3 22.4 22.8-83.2-3.8-6c-16.6-26-25.4-56-25.4-87 0-90.1 73.3-163.4 163.4-163.4 43.6 0 84.6 17 115.5 47.9 30.9 30.9 47.9 71.9 47.9 115.5 0 90.1-73.3 163.4-163.4 163.4zm101.5-138.1c-5.6-2.8-33.1-16.3-38.2-18.1-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18.1-17.6 21.8c-3.2 3.7-6.5 4.2-12.1 1.4-33.1-16.5-54.8-29.4-76.7-66.5-5.8-10 5.8-9.3 16.5-30.9 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.3 60.2 95.2 84.4 13.3 5.7 23.7 9.1 31.8 11.7 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 33.1-13.5 37.7-26.5 4.6-13.1 4.6-24.3 3.2-26.5-1.3-2.2-5.1-3.6-10.7-6.3z"/>
+    </svg>
+  </a>
+<script>
+    window.addEventListener('scroll', () => {
+      const whatsapp = document.querySelector('.whatsapp');
+      if (window.scrollY > 100) {
+        whatsapp.style.transform = 'scale(0.8)';
+        whatsapp.style.opacity = '1';
+      } else {
+        whatsapp.style.transform = 'scale(1)';
+        whatsapp.style.opacity = '1';
+      }
+    });
+  </script>
+</body>
+</html>
